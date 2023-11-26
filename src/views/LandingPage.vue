@@ -1,12 +1,11 @@
 <template>
-
-        <h1>Hello there from the landing pAGE</h1>
+        <h1>Landing page</h1>
 </template>
 
 <script setup>
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 
 </style>

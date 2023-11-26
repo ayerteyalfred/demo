@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from  'vue-router'
-import LandingPage from '@/views/LandingPage'
-// import LandingPage from '../views/LandingPage'
-import AuthPage from '@/views/AuthPage'
-import HomePage from '@/views/HomePage'
+import LandingPage from '@/views/LandingPage.vue'
+import HomePage from '@/views/HomePage.vue'
+import AuthPage from '@/views/AuthPage.vue'
 
 
 
@@ -28,5 +27,6 @@ const router = createRouter({
         
     ]
 })
+
 
 export default router 
