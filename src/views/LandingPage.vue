@@ -2,7 +2,7 @@
         <div class="main">
                 <div class="modal" v-if="showModal">
                         <!-- <img class="icon" src="/images/left_arrow.png" alt=""> -->
-                        <button>Click me !</button>
+                        <!-- <button>Click me !</button> -->
                         <LoginComponent />
                 </div>
                 <section class="container">
