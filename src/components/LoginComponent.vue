@@ -1,7 +1,10 @@
 <template>
     <div class="container">
         <img src="/images/smile.jpg" alt="pic">
-        <div class="details">    
+        <div class="details">
+            <div class="icon">
+                <img @click="closeModal()" class="icon_n" src="/images/left_arrow.png" alt="icon">
+            </div>
             <h1>Create an account</h1>
             <form class="form">
                 <input type="text" placeholder="Username">
@@ -14,6 +17,7 @@
 </template>
 
 <script setup>
+const props = defineProps(['closeModal'])
 
 
 
@@ -33,6 +37,7 @@
     z-index: 10;
 
 }
+
 .container img {
     width: 40%;
     height: 80%;
@@ -41,34 +46,29 @@
 
 .details {
     background-color: #677e5d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding-top: 50px; */
     align-items: center;
     border-radius: 0 10px 10px 0;
     width: 30%;
     height: 80%;
 }
-.details .icon{
+
+.details img {
     width: 30px;
     height: 40px;
-   
+    margin-top: 5px;
+    margin-bottom: 70px;
 }
 
-.details h1{
-    margin-right: 30%;
+.icon {}
+
+.details h1 {
+    margin-left: 50px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    /* justify-content: center; */
-    /* border: 1px solid blue; */
-    /* padding: 40px; */
-    /* margin-top: 50px; */
-    /* gap: 25px; */
+    margin-left: 50px;
 }
 
 .form input {
