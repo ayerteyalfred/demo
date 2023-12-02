@@ -1,9 +1,7 @@
 <template>
         <div class="main">
-                <div class="modal" v-if="showModal">
-                        <!-- <img class="icon" src="/images/left_arrow.png" alt=""> -->
-                        <!-- <button>Click me !</button> -->
-                        <LoginComponent />
+                <div class="modal" v-if="showModal" >
+                        <LoginComponent :closeModal="closeModal" />
                 </div>
                 <section class="container">
 
@@ -25,6 +23,10 @@ import { ref } from 'vue'
 
 const showModal = ref(false)
 
+const closeModal = () => {
+        showModal.value = !showModal.value
+}
+
 
 
 </script>
@@ -33,23 +35,14 @@ const showModal = ref(false)
 * {
         box-sizing: border-box;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        /* margin: 0; */
-        /* padding: ; */
-}
-
-.modal {
-        /* border: 3px solid red; */
-        /* position: relative; */
 }
 
 .main {
-        /* position: relative; */
         height: 100vh;
         overflow: hidden;
 }
 
 .icon {
-        /* position: relative; */
         background-color: #156434;
         top: 500px;
         width: 30px;
@@ -71,15 +64,12 @@ const showModal = ref(false)
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        object-fit: contain;
 
 }
 
 .text {
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* gap: 0px; */
         align-items: center;
         border-radius: 15px;
         background-color: #677e5d;
